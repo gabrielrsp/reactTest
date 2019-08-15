@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.0",
+    "enzyme": "^3.10.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-redux": "^7.1.0",
+    "react-scripts": "3.1.1",
+    "redux": "^4.0.4",
+    "redux-saga": "^1.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -15,6 +20,15 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/store/ducks/*.js",
+      "src/store/sagas/*.js",
+      "src/*.js",
+      "!src/setupTests.js",
+      "!src/index.js"
+    ]
   },
   "browserslist": {
     "production": [
@@ -27,5 +41,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "^1.17.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "redux-mock-store": "^1.5.3"
   }
 }
